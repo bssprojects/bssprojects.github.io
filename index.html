@@ -17,13 +17,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var paymentConfig = {
+            const paymentConfig = {
                 createCheckoutURL: "https://merchantserver.sandbox.bka.sh/api/checkout/v1.2.0-beta/payment/create",
                 executeCheckoutURL: "https://merchantserver.sandbox.bka.sh/api/checkout/v1.2.0-beta/payment/execute",
             };
 
-            var paymentRequest;
-            paymentRequest = { amount: '5', intent: 'sale' };
+            const paymentRequest = { amount: '5', intent: 'sale' };
             console.log("paymentRequest:", paymentRequest);
 
             bKash.init({
